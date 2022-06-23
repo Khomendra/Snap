@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 98%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 4%;
+    z-index: 999;
+}
+
+li, a:not(.learn-btn), button{
+    font-weight: 500;
+    font-size: 16px; /*16px*/
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+nav{
+    margin-left: 40px;
+}
+
+nav > ul > li{
+    display: inline-block;
+    margin: 20px;
+}
+
+.nav-link li.feature, .nav-link li.company{
+    position: relative;
+}
+
+.nav-link li a:hover, .ctb button:hover, .cta button:hover{
+    color: hsl(0, 0%, 8%);
+    border-color: hsl(0, 0%, 8%);
+}
+
+nav li:hover ul {
+    display: block;
+  }
+
+.group{
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: auto auto;
+    margin-left: auto;
+}
+
+ .cta button{
+    background-color: hsl(0, 0%, 98%);
+    border: none;
+}
+
+.cta button, .ctb button{
+    padding: 10px 20px;
+    border-radius: 15px;
+    border-color: hsl(0, 0%, 41%);
+    cursor: pointer;
+}
+
+.inner-list{
+    background: hsl(0, 0%, 98%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    margin-top: 20px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+.feature .inner-list{
+    min-width: 160px;
+    float: right;
+    right: 0;
+    border-radius: 15px;
+}
+
+ .company .inner-list{
+    min-width: 140px;
+    border-radius: 15px;
+}
+
+.inner-list li{
+    display: block;
+    padding: 8px 0;
+}
+
+.icon{
+    padding: 0 8px;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.text-page{
+    margin-left: 160px;
+}
+
+.text-page .lead{
+    font-weight: 700;
+    font-size: 80px;
+    padding: 160px 0 20px 0;
+    margin-left: 20px;
+}
+
+.lead span{
+    display: table;
+    line-height: 70px;
+}
+
+.text-page p{
+    color: rgba(128, 128, 128, 0.983);
+    font-weight: 500;
+    font-size: 18px;
+    padding: 20px 0 60px 0;
+    text-align: justify;
+    margin-left: 20px;
+    line-height: 30px;
+}
+
+.hero .hero-img{
+    position: absolute;
+    right: 110px;
+    top: 40px;
+    margin-right: 40px;
+}
+
+.hero-img img{
+    top: 0px;
+    left: 0px;
+    height: 650px;
+    object-fit: fill;
+}
+
+.learn-btn{
+    background: #000;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 15px;
+    display: inline-block;
+    margin:10px 0 20px 20px;
+    transition-duration: 0.4s;
+    border:1px solid #000;
+}
+
+.learn-btn:hover{
+    background: #ffffff;
+    color: #000;
+}
+
+.img-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 90px;
+    margin-left: 20px;
+}
+
+.img-list img{
+    padding-right: 40px ;
+}
+
+.menu, .close-menu{
+    display: none;
+}
+
+/* Mobile view here */
+@media screen and (max-width: 375px) {
+    nav ul li, .group{
+        display: block;
+    }
+
+    nav{
+        position: absolute;
+        background: hsl(0, 0%, 98%);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+
+    .group{
+        z-index: 3;
+    }
+
+    .menu, .close-menu{
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+        float: right;
+        margin: 20px;
+    }
+}
+
+
+
+/* Mobile view End here */
+
